@@ -1,0 +1,247 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+	margin:0;
+	padding:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent;
+	outline:none;
+}
+table {						/* устраняем отступы между ячейками таблицы */
+	border-collapse: collapse; 
+	border-spacing: 0;
+}
+td, td img {
+	vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+} 
+input, select, button, textarea {
+	margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+	font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+	outline: none;
+}
+input[type="text"], input[type="password"], textarea {
+	padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+}
+input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+	vertical-align: bottom;
+}
+input[type="radio"] {
+	vertical-align: text-bottom;
+}
+sub {
+	vertical-align: sub;
+	font-size: smaller;
+}
+sup {
+	vertical-align: super;
+	font-size: smaller;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display:block;
+}
+nav ul {
+	 list-style:none;
+}
+/* --------------- /reset.css --------------- */
+
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+body {
+	color: #000;
+	text-align: left;
+	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+	min-height:100%;
+}
+a, a:visited { /* порядок правил для ссылок имеет значение */
+	color: #e6618c;
+	text-decoration: underline;
+}
+a:hover {
+	color: #4AB94F;
+	text-decoration:none;
+}
+a:focus, a:active {
+	color: #c83867;
+	text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight:normal;
+}
+img{
+
+	max-width:100%;
+}
+.clr{
+	clear:both;
+}
+.clearfix:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+/* --------------- /базовые настройки ---------*/
+
+.container {
+	width: 100%;
+	margin: 0 auto;
+}
+h1 {
+	text-align: center;
+	font-size: 2.5em;
+	margin: 10px auto;
+}
+h2 {
+	font-size: 1.5em;
+}
+.navigation li {
+	border-left: 2px solid #4AB94F;
+	box-sizing: border-box;
+	float: left;
+	width: 12.5%;
+	text-align: center;
+	font-size: 1.2em;
+	margin: 20px 0;
+}
+.navigation img {
+	height: 40px;
+	position: absolute;
+}
+.navigation img {
+	visibility: hidden;
+}
+#left-border {
+	border-left: 2px solid #fff;
+}
+.navigation a {
+	text-decoration: none;
+}
+main {
+	float: left;
+	width: 65%;
+	padding: 5%;
+}
+aside {
+	float: right;
+	width: 20%;
+	padding-top: 5%;
+	padding-right: 5%;
+	display: block;
+}
+article {
+	padding-bottom: 20px;
+}
+article img {
+	margin: 10px 0;
+}
+a.more {
+	margin: 20px 0;
+	border: 2px solid #c83867;
+	padding: 7px 20px;
+	color: #c83867;
+	display: inline-block;
+	border-radius: 20px;
+	text-decoration: none;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	-o-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+a.more:hover {
+	color: #4AB94F;
+	border-color: #4AB94F 
+}
+p {
+	line-height: 1.5;
+}
+.widget {
+	margin-bottom: 50px;
+	width: 100%;
+}
+.widget h2 {
+	text-transform: uppercase;
+	color: #6c6969;
+	border-bottom: 3px solid #c83867;
+	padding: 10px 0 10px 20px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+.search {
+	color: #b9b9b9;
+	font-size: 0.9em;
+	width: 85%;
+	border: 1px solid #e1e0e0;
+	padding: 15px 20px 15px 20px;
+	height: 20px;
+}
+.widget li {
+	padding-bottom: 5px;
+}
+.widget a{
+	text-decoration: none;
+
+}
+footer {
+	float: left;
+	background: #D4D7F0;
+	padding: 20px 0;
+	padding-left: 5%;
+	width: 95%;
+}
+@media screen and (max-width: 888px) {
+	.navigation li {
+		width: 25%;
+	}
+	#left-border2 {
+	 	border-left: 2px solid #fff;	
+	}
+}
+@media screen and (max-width: 730px) {
+	aside {
+		float: none;
+		width: 90%;
+	}
+	main {
+		float: none;
+		width: 90%;
+	}
+}
+@media screen and (max-width: 450px) {
+	aside {
+		padding: 0;
+		width: 100%;
+		float: none;
+	}	
+	main {
+		width: 100%;
+		padding: 0;
+		}
+	.navigation img {
+		display: block;
+		position: static;
+		margin: 10px auto;
+		visibility: visible;
+		}
+	.b-nav{
+		display: none;
+		}
+	.navigation li {
+		list-style: none;
+		padding: 0;
+		display: block;
+		float: none;
+		border: none;
+		text-align: center;
+		width: 100%;
+		}
+}	
